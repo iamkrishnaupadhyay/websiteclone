@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart Sign Up</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <style>
+    /* .container {
+      background-color: #ffff00;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    } */
+    .card {
+      background-color: #0000ff;
+      color: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .card-header {
+      background-color: #ffff00;
+      color: blue;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .form-control {
+      border-radius: 0.25rem;
+      box-shadow: none;
+      border: 1px solid #0000ff;
+    }
+    .btn-primary {
+        background-color: #ffff00;
+      color: blue;
+      border-radius: 0.25rem;
+      border: 1px solid #0000ff;
+    }
+    .btn-link {
+        background-color: #ffff00;
+      color: blue;
+    }
+
+    .btn-link:hover {
+      color: #007bff;
+    }
+    
+    .signup{
+        color: yellow;
+    }
+
+    .flipkart-logo {
+      display: block;
+      margin: 0 auto;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card mt-5">
+      <div class="card-header">
+        <img src="data:image/png;base64,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">
+        <h2>Flipkart Sign Up</h2>
+      </div>
+      <div class="card-body">
+        <form action="#">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+              </div>
+              <div class="mb-3">
+                <label for="email class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter your email">
+              </div>
+            
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter your username">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+          </div>
+          <!-- <button type="submit" class="btn btn-primary"><a href="login.html">Login</a></button> -->
+          <a href="#" class="btn btn-primary" style="margin-bottom: 2px">Sign Up</a>
+          <a href="index.html" class="btn btn-primary" style="margin-bottom: 2px">Home</a>
+          Already have Account ? <a href="login.html" class="signup">Login Here</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
